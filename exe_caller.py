@@ -1,10 +1,7 @@
 import subprocess
 import time
-import datetime
 
 def run_exe_in_loop(exe_path, loop_delay):
-
-    current_date = datetime.datetime.now().date()
 
     for iter in range(0, 30):
         try:
@@ -15,7 +12,7 @@ def run_exe_in_loop(exe_path, loop_delay):
         except KeyboardInterrupt:
             print("Exiting the loop.")
             break
-        
+
         if loop_delay > 0 :
             time.sleep(loop_delay)
 
